@@ -43,15 +43,15 @@ int main()
                i + 1, AT[i], BT[i], CT[i], TAT[i], WT[i]);
     }
     
-    int avgTAT = 0;
-    int avgWT = 0;
+    float avgTAT = 0;
+    float avgWT = 0;
     for (int i = 0; i < n; i++)
     {
         avgTAT += TAT[i];
         avgWT += WT[i];
     }
-    printf("Average TAT = %d\n", (avgTAT/n));
-    printf("Average WT = %d\n", (avgWT/n));
+    printf("Average TAT =  %.2f\n", (avgTAT/n));
+    printf("Average WT =  %.2f\n", (avgWT/n));
 
     return 0;
 }
