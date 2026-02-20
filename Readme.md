@@ -25,15 +25,26 @@ Contains first OS assignment files.
 
 ## 2️⃣ Class/
 
-Contains programs implemented during class lectures.
+Contains programs implemented during class lectures related to CPU scheduling algorithms.
 
-- fcfs.c — First Come First Serve (FCFS) scheduling algorithm  
-- fcfsSortByAT.c — FCFS scheduling sorted by Arrival Time  
+### 📂 Files
 
-Topics Covered:
-- CPU Scheduling
-- FCFS Algorithm
-- Process scheduling calculations
+- fcfs.c — Implementation of First Come First Serve (FCFS) scheduling  
+- fcfsSortByAT.c — FCFS scheduling after sorting processes by Arrival Time  
+- fcfsWithReadyTime.c — FCFS scheduling considering Ready Time / I-O overhead  
+
+
+---
+
+### 📌 Topics Covered
+
+- CPU Scheduling  
+- First Come First Serve (FCFS) Algorithm  
+- Arrival Time based scheduling  
+- Completion Time (CT) calculation  
+- Turnaround Time (TAT) calculation  
+- Waiting Time (WT) calculation  
+- Ready Time / I-O time handling  
 
 ---
 
