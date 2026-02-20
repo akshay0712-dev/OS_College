@@ -1,38 +1,57 @@
 #include <stdio.h>
 
-int main() {
-    int n, i;
+int main()
+{
+    printf("----------FCFS----------\n");
+
+    int n = 5;
+
+    // printf("Enter number of processes: ");
+    // scanf("%d", &n);
+
+    int AT[] = {0, 1, 2, 3, 4};
+    int BT[] = {5, 7, 6, 2, 4};
+    int CT[n], TAT[n], WT[n];
+
+    // // input Arrival time and burst time
+    // for (int i = 0; i < n; i++) {
+    //     printf("P%d Arrival Time: ", (i+1));
+    //     scanf("%d", &AT[i]);
+    //     printf("P%d Burst Time: ", (i+1));
+    //     scanf("%d", &BT[i]);
+    // }
+
+    // calculate CT, TAT, WT
+    for (int i = 0; i < n; i++)
+    {
+
+        if (i == 0)
+            CT[i] = AT[i] + BT[i];
+        else
+            CT[i] = (CT[i - 1] > AT[i] ? CT[i - 1] : AT[i]) + BT[i];
+
+        TAT[i] = CT[i] - AT[i];
+        WT[i] = TAT[i] - BT[i];
+    }
+
+    // print result
+    printf("\nProcess\tArrival Time\tBurst Time\tCompletion Time\tTurnaround Time\tWaiting Time\n");
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("P%d\t\t%d\t\t%d\t\t%d\t\t%d\t\t%d\n",
+               i + 1, AT[i], BT[i], CT[i], TAT[i], WT[i]);
+    }
     
-    printf("Enter number of processes: ");
-    scanf("%d", &n);
-    
-    int bt[n], wt[n], tat[n];
-    
-    printf("Enter Burst Time for each process:\n");
-    for(i = 0; i < n; i++) {
-        printf("Process %d: ", i + 1);
-        scanf("%d", &bt[i]);
+    int avgTAT = 0;
+    int avgWT = 0;
+    for (int i = 0; i < n; i++)
+    {
+        avgTAT += TAT[i];
+        avgWT += WT[i];
     }
-
-    // First process waiting time is 0
-    wt[0] = 0;
-
-    // Calculate waiting time
-    for(i = 1; i < n; i++) {
-        wt[i] = wt[i - 1] + bt[i - 1];
-    }
-
-    // Calculate turnaround time
-    for(i = 0; i < n; i++) {
-        tat[i] = wt[i] + bt[i];
-    }
-
-    // Display results
-    printf("\nProcess\tBurst Time\tWaiting Time\tTurnaround Time\n");
-    for(i = 0; i < n; i++) {
-        printf("P%d\t\t%d\t\t%d\t\t%d\n", 
-                i + 1, bt[i], wt[i], tat[i]);
-    }
+    printf("Average TAT = %d\n", (avgTAT/n));
+    printf("Average WT = %d\n", (avgWT/n));
 
     return 0;
 }

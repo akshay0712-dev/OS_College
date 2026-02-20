@@ -1,26 +1,63 @@
-# Akshay Kumar 
--  Roll: 24520 
--  Registration no: 24105142007 
+# Akshay Kumar (Branch: Computer Science)
+**Roll No:** 24520  
+**Registration No:** 24105142007  
 
-## Operating System Repo
+# Operating Systems (OS) Repository
 
-This repository contains college Operating Systems assignments and lab work. Each assignment is organized in its own folder and includes source code, documentation, and example inputs/outputs.
+This repository contains my college Operating Systems assignments, class programs, and practice implementations written in C.
 
-Suggested structure:
-- Assignment-01/
-    - README.md — description and instructions
-    - src/ — source code
-    - docs/ — reports and diagrams
-- Assignment-02/
-    - ...
+All work is organized folder-wise for easy navigation and evaluation.
 
-How to use:
-1. Open the assignment folder.
-2. Follow that folder's README to build and run the code.
-3. Submit the required files as instructed by the course.
+---
 
-Contribution:
-- Add your work in a new or existing assignment folder.
-- Keep file names and documentation clear.
+# 📁 Repository Structure
 
-License: See repository LICENSE (if present).
+## 1️⃣ Assignment1/
+
+Contains first OS assignment files.
+
+- Assignment!.pdf — Assignment question sheet  
+- fork.c — Implementation of fork() system call  
+- fork — Compiled executable  
+- Readme.md — Assignment-specific documentation  
+
+---
+
+## 2️⃣ Class/
+
+Contains programs implemented during class lectures.
+
+- fcfs.c — First Come First Serve (FCFS) scheduling algorithm  
+- fcfsSortByAT.c — FCFS scheduling sorted by Arrival Time  
+
+Topics Covered:
+- CPU Scheduling
+- FCFS Algorithm
+- Process scheduling calculations
+
+---
+
+## 3️⃣ Learning_OS/
+
+Contains practice and experimental programs for understanding OS concepts.
+
+- file.c — File handling system call implementation  
+- file — Compiled executable  
+
+---
+
+# 🛠 Language & Tools Used
+
+- C Programming Language  
+- GCC Compiler  
+- Linux system calls (fork, file handling)
+
+---
+
+# ▶ How to Compile and Run
+
+Open terminal in the respective folder and use:
+
+```bash
+gcc filename.c -o output
+./output
