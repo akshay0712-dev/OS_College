@@ -1,3 +1,7 @@
+# Akshay Kumar 
+-  Roll: 24520 
+-  Registration no: 24105142007 
+
 ## Operating System Repo
 
 This repository contains college Operating Systems assignments and lab work. Each assignment is organized in its own folder and includes source code, documentation, and example inputs/outputs.
